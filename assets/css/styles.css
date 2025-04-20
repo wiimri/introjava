@@ -1,0 +1,70 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.producto {
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  background-color: #8bc34a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.producto h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 15px 0;
+}
+
+.cantidad-control button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border: none;
+  background-color: #ffc107;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cantidad-control button:hover {
+  background-color: #e0a800;
+}
+
+.precio,
+.total {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.precio {
+  font-size: 1rem;
+}
+
+.total {
+  font-size: 1.1rem;
+}

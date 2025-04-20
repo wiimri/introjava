@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de Producto</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="producto">
+    <img src="assets/img/rtrx5090.webp" alt="Laptop Gamer AMD">
+    <h2>Laptop Gamer AMD</h2>
+    <p class="precio">Precio base: $<span id="precio">400000</span></p>
+  
+    <div class="cantidad-control">
+      <button onclick="restar()">-</button>
+      <p>Cantidad: <span id="cantidad">0</span></p>
+      <button onclick="sumar()">+</button>
+    </div>
+  
+    <p class="total">Total a pagar: $<span id="total">0</span></p>
+  </div>
+  
+
+  <script>
+    let cantidad = 1;
+    const precio = 400000;
+
+    const cantidadSpan = document.querySelector('#cantidad');
+    const totalSpan = document.querySelector('#total');
+
+    function actualizarTotal() {
+      cantidadSpan.innerHTML = cantidad;
+      totalSpan.innerHTML = precio * cantidad;
+    }
+
+    function sumar() {
+      cantidad++;
+      actualizarTotal();
+    }
+
+    function restar() {
+      if (cantidad > 1) {
+        cantidad--;
+        actualizarTotal();
+      }
+    }
+  </script>
+</body>
+</html>
